@@ -117,11 +117,3 @@ val_dataloader = dict(
 test_dataloader = dict(
     dataset=dict(
         data_root='data/MOT20', ann_file='annotations/test_cocoformat.json'))
-
-test_evaluator = dict(
-    type='MOTChallengeMetrics',
-    postprocess_tracklet_cfg=[
-        dict(type='InterpolateTracklets', min_num_frames=5, max_num_frames=20)
-    ],
-    format_only=True,
-    outfile_prefix='./mot_20_test_res')
