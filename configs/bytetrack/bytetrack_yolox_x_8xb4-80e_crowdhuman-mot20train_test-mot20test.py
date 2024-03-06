@@ -120,8 +120,6 @@ test_dataloader = dict(
 
 test_evaluator = dict(
     type='MOTChallengeMetrics',
-    postprocess_tracklet_cfg=[
-        dict(type='InterpolateTracklets', min_num_frames=5, max_num_frames=20)
-    ],
+    metric=['HOTA', 'CLEAR', 'Identity'],
     format_only=True,
     outfile_prefix='./mot_20_test_res')
