@@ -1,4 +1,4 @@
-__base__ = ['bytetrack_yolox_x_8xb4-80e_crowdhuman-mot20train_test-mot20test.py']
+__base__ = ['./bytetrack_yolox_x_8xb4-80e_crowdhuman-mot20train_test-mot20test.py']
 
 test_evaluator = dict(
     type='NAJMetrics',
