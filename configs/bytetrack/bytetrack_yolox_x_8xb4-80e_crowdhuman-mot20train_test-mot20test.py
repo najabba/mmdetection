@@ -117,9 +117,3 @@ val_dataloader = dict(
 test_dataloader = dict(
     dataset=dict(
         data_root='data/MOT20', ann_file='annotations/test_cocoformat.json'))
-
-test_evaluator = dict(
-    type='MOTChallengeMetrics',
-    metric=['HOTA', 'CLEAR', 'Identity'],
-    format_only=True,
-    outfile_prefix='./mot_20_test_res')
